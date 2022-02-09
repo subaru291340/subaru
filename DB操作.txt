@@ -1,0 +1,9 @@
+これで一応DB起動
+mysqld
+
+これだと普通にルートユーザとして動ける
+mysql -u root -p
+
+これでDB指定。それ以降はSQL投げれる
+use mydb
+
