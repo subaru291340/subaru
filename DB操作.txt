@@ -7,3 +7,8 @@ mysql -u root -p
 これでDB指定。それ以降はSQL投げれる
 use mydb
 
+py -m pip install ライブラリ名
+
+py -m pip download ライブラリ名
+
+py -m pip install --no-index-- whlファイル
