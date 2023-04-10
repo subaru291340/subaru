@@ -1,0 +1,84 @@
+/* styles.css */
+.container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    background-color: #242841;
+    padding: 20px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .sidebar a:hover {
+    color: #66ccff;
+  }
+  
+  .content {
+    margin: 20px;
+  }
+  
+  form {
+    max-width: 300px;
+  }
+  
+  label,
+  input {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="radio"] {
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+  }
+  
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  .input-container {
+    background-color: #f0f3f5;
+    border-radius: 3px;
+    padding: 5px;
+  }
+  
+  .input-container:hover {
+    background-color: #e6eaee;
+  }
+  
+  .input-container:focus-within {
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(102, 204, 255, 0.7);
+  }
+  
+  input[type="submit"] {
+    background-color: #66ccff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #3399cc;
+  }
+  
