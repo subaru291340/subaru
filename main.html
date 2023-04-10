@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>従業員情報</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="sidebar">
+    <ul>
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#python">PYTHON</a></li>
+      <li><a href="#csharp">C#</a></li>
+      <li><a href="#tips">TIPS</a></li>
+      <li><a href="#links">LINKS</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <h1>従業員情報</h1>
+    <form>
+      <label for="name">名前：</label>
+      <input type="text" id="name" name="name">
+      <label for="gender">性別：</label>
+      <div class="gender-options">
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">男性</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">女性</label>
+      </div>
+      <label for="department">部署名：</label>
+      <input type="text" id="department" name="department">
+      <input type="submit" value="送信">
+    </form>
+  </div>
+</body>
+
+</html>

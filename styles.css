@@ -1,0 +1,86 @@
+/* styles.css */
+body {
+  background-color: #3A3D51;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.sidebar {
+  background-color: #242841;
+  padding: 20px;
+  height: 100vh;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar a:hover {
+  color: #66CCFF;
+}
+
+.content {
+  margin: 20px;
+}
+
+form {
+  max-width: 300px;
+}
+
+label,
+input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="radio"] {
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+.input-container {
+  background-color: #F0F3F5;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.input-container:hover {
+  background-color: #E6EAEE;
+}
+
+.input-container:focus-within {
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(102, 204, 255, 0.7);
+}
+
+input[type="submit"] {
+  background-color: #66CCFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #3399CC;
+}
