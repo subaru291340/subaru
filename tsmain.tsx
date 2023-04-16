@@ -1,12 +1,17 @@
-// Reactのインポート
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ChangeEvent } from 'react';
+
+// タスクの型定義
+interface Task {
+  id: number;
+  title: string;
+}
 
 // タスク管理アプリのメインコンポーネント
-const TaskManagerApp = () => {
+const TaskManagerApp: React.FC = () => {
   // タスク一覧のステート
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState<Task[]>([]);
   // 新しいタスクのタイトルのステート
-  const [newTaskTitle, setNewTaskTitle] = useState('');
+  const [newTaskTitle, setNewTaskTitle] = useState<string>('');
 
   // タスク一覧を取得する関数
   const fetchTasks = async () => {
@@ -46,6 +51,11 @@ const TaskManagerApp = () => {
     }
   };
 
+  // 新しいタスクのタイトルの変更をハンドルする関数
+  const handleNewTaskTitleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setNewTaskTitle(e.target.value);
+  };
+
   return (
     <div>
       <h1>タスク管理アプリ</h1>
@@ -59,7 +69,7 @@ const TaskManagerApp = () => {
       <input
         type="text"
         value={newTaskTitle}
-        onChange={e => setNewTaskTitle(e.target.value)}
+        onChange={handleNewTaskTitleChange}
       />
       <button onClick={createTask}>タスク作成</button>
     </div>
