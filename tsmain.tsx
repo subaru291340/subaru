@@ -1,48 +1,69 @@
-// App.tsx
-import React from "react";
-import "./styles.css";
+// Reactのインポート
+import React, { useState, useEffect } from 'react';
 
-const App: React.FC = () => {
+// タスク管理アプリのメインコンポーネント
+const TaskManagerApp = () => {
+  // タスク一覧のステート
+  const [tasks, setTasks] = useState([]);
+  // 新しいタスクのタイトルのステート
+  const [newTaskTitle, setNewTaskTitle] = useState('');
+
+  // タスク一覧を取得する関数
+  const fetchTasks = async () => {
+    try {
+      // タスク一覧をAPIから取得する処理
+      const response = await fetch('/api/tasks');
+      const data = await response.json();
+      setTasks(data);
+    } catch (error) {
+      console.error('Failed to fetch tasks:', error);
+    }
+  };
+
+  // コンポーネントがマウントされたときにタスク一覧を取得する
+  useEffect(() => {
+    fetchTasks();
+  }, []);
+
+  // 新しいタスクを作成する関数
+  const createTask = async () => {
+    try {
+      // 新しいタスクをAPIに送信する処理
+      const response = await fetch('/api/tasks', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ title: newTaskTitle })
+      });
+      const data = await response.json();
+      // タスク一覧を更新する
+      setTasks([...tasks, data]);
+      // 新しいタスクのタイトルをリセットする
+      setNewTaskTitle('');
+    } catch (error) {
+      console.error('Failed to create task:', error);
+    }
+  };
+
   return (
-    <div className="container">
-      <div className="sidebar">
-        <ul>
-          <li>
-            <a href="#home">HOME</a>
-          </li>
-          <li>
-            <a href="#python">PYTHON</a>
-          </li>
-          <li>
-            <a href="#csharp">C#</a>
-          </li>
-          <li>
-            <a href="#tips">TIPS</a>
-          </li>
-          <li>
-            <a href="#links">LINKS</a>
-          </li>
-        </ul>
-      </div>
-      <div className="content">
-        <h1>従業員情報</h1>
-        <form>
-          <label htmlFor="name">名前：</label>
-          <input type="text" id="name" name="name" />
-          <label htmlFor="gender">性別：</label>
-          <div className="gender-options">
-            <input type="radio" id="male" name="gender" value="male" />
-            <label htmlFor="male">男性</label>
-            <input type="radio" id="female" name="gender" value="female" />
-            <label htmlFor="female">女性</label>
-          </div>
-          <label htmlFor="department">部署名：</label>
-          <input type="text" id="department" name="department" />
-          <input type="submit" value="送信" />
-        </form>
-      </div>
+    <div>
+      <h1>タスク管理アプリ</h1>
+      {/* タスク一覧の表示 */}
+      <ul>
+        {tasks.map(task => (
+          <li key={task.id}>{task.title}</li>
+        ))}
+      </ul>
+      {/* 新しいタスクの入力フォーム */}
+      <input
+        type="text"
+        value={newTaskTitle}
+        onChange={e => setNewTaskTitle(e.target.value)}
+      />
+      <button onClick={createTask}>タスク作成</button>
     </div>
   );
 };
 
-export default App;
+export default TaskManagerApp;
