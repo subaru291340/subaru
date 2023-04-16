@@ -1,0 +1,24 @@
+import PySimpleGUI as sg
+
+# ボタン名のリスト
+buttons = ['COMPAS', 'SAP', 'PLS', 'Redmine']
+
+# レイアウトの定義
+layout = [
+    [sg.Button(buttons[0], size=(10, 2)), sg.Button(buttons[1], size=(10, 2))],
+    [sg.Button(buttons[2], size=(10, 2)), sg.Button(buttons[3], size=(10, 2))]
+]
+
+# ウィンドウの生成
+window = sg.Window('ボタン画面', layout)
+
+while True:
+    event, _ = window.read()  # イベントの取得
+
+    # イベントに応じた処理
+    if event in buttons:
+        sg.popup(f'ボタン「{event}」がクリックされました。')
+    elif event == sg.WIN_CLOSED:
+        break
+
+window.close()
