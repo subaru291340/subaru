@@ -14,3 +14,6 @@ py -m pip download ライブラリ名
 py -m pip install --no-index-- whlファイル
 
 pipdeptree
+
+p
+
