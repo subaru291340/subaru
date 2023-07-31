@@ -1,0 +1,657 @@
+1.
+
+1. Pythonの特徴に関する次の記述のうち、誤っているものはどれか。
+Answer Provided:
+✓Pythonでは、文のグルーピングはカッコで囲うことでなくインデントで行われるなど、プログラムを小さく読みやすく書けるという特徴がある。ただ変数や引数の宣言は必要である。
+
+
+Correct Answer: Pythonでは、文のグルーピングはカッコで囲うことでなくインデントで行われるなど、プログラムを小さく読みやすく書けるという特徴がある。ただ変数や引数の宣言は必要である。
+
+Comments Entered: NA
+
+2.
+2. Pythonインタープリタに関する次の記述のうち、誤っているものはどれか。
+Answer Provided:
+✓セカンダリプロンプトの記号はデフォルトでは「<<<」である。
+
+
+Correct Answer: セカンダリプロンプトの記号はデフォルトでは「<<<」である。
+
+Comments Entered: NA
+
+3.
+3. 【A】～【E】の行にある#から始まる文字列のうちPythonではコメントとして解釈されないものはどれか。
+
+# あいさつ文を表示します。　…【A】
+x = 'Hello' # Helloを変数に代入します。　…【B】
+# Worldを変数に　…【C】
+               # 代入します。　…【D】
+y = 'World !'　
+print ('{}!{}!! #あいさつ文はここまでです。'.format(x, y)) 　…【E】
+
+Answer Provided:
+✓【E】
+
+
+Correct Answer: 【E】
+
+Comments Entered: NA
+
+4.
+4. 次のコードの実行結果として正しいものはどれか。
+
+a = 10
+b = a ** 2
+c = b % 20 + 5
+d = 8
+e = d / b
+f = d // c
+print ('{0}, {1}'.format(e, f))
+Answer Provided:
+✕0.08, 0
+
+
+Correct Answer: 0.08, 1
+
+Comments Entered: NA
+
+5.
+5. 次のコードの実行結果はどれか。なおコードの\はバックスラッシュに読み替えること。
+
+a = "She said,\"He" + 3 * "y" + "!"
+b = "How are you?\" "
+print (a, b)
+Answer Provided:
+✓She said,"Heyyy! How are you?"
+
+
+Correct Answer: She said,"Heyyy! How are you?"
+
+Comments Entered: NA
+
+6.
+6. 次のコードの実行結果として正しいものはどれか。
+
+Zen = 'NowIsBetterThanNever'
+print('{}{}{}{}'.format(Zen[5], Zen[10], Zen[-7], Zen[-3:-1]))
+Answer Provided:
+✓Brave
+
+
+Correct Answer: Brave
+
+Comments Entered: NA
+
+7.
+7. 次の変数Zenに関して指定した場合、実行時にエラーとなるものはどれか。
+
+Zen = 'SimpleIsBetterThanComplex'
+
+Answer Provided:
+✕Zen[:1000] + 'J'
+
+
+Correct Answer: Zen[0] = 'J'
+
+Comments Entered: NA
+
+8.
+8. 次のコードの実行結果として正しいものはどれか。
+
+a, b = 0, 1
+while b < 10:
+    print(b, end=',')
+    a, b = b, a+b
+Answer Provided:
+✓1,1,2,3,5,8,
+
+
+Correct Answer: 1,1,2,3,5,8,
+
+Comments Entered: NA
+
+9.
+9. 次のコードの実行結果として正しいものはどれか。
+
+colors = ['red', 'green', 'blue']
+colors.append('yellow')
+colors.insert(0,'purple')
+for color in colors[2:]:
+    print(color, len(color), end = ', ')
+Answer Provided:
+✓green 5, blue 4, yellow 6,
+
+
+Correct Answer: green 5, blue 4, yellow 6,
+
+Comments Entered: NA
+
+10.
+10. 次のような結果を得たい場合、コードの【A】の行に入る適切なものはどれか。なお【A】に入るものは、★aの行と同じ数の空白でインデントされている。
+
+[ 実行結果 ]
+2 is a prime number
+3 is a prime number
+4 equals 2 * 2
+
+[ コード ]
+for n in range(2, 10):
+    for x in range(2 ,n): 　　…★a
+        if n % x == 0:
+            print(n, 'equals', x, '*', n//x)
+            break
+    【A】
+        print(n,'is a prime number')
+        continue
+    break
+
+Answer Provided:
+✓else:
+
+
+Correct Answer: else:
+
+Comments Entered: NA
+
+11.
+11. 次のコードの実行結果として正しいものはどれか。
+
+for i in range(-10, -30, -5):
+    print(i, end=", ")
+Answer Provided:
+✓-10, -15, -20, -25,
+
+
+Correct Answer: -10, -15, -20, -25,
+
+Comments Entered: NA
+
+12.
+12. 次の結果を得たい場合、コードの2行目以降を代替するものとして正しいものはどれか。なお各選択肢の次の行には「 print(i, v) 」が記述されるものとする。
+
+[ 実行結果 ]
+0 Now
+1 is
+2 better
+3 than
+4 never
+
+[コード]
+Zen = ['Now','is','better','than','never']
+for i in range(len(Zen)):
+    print(i, Zen[i])
+Answer Provided:
+✓for i ,v in enumerate(Zen):
+
+
+Correct Answer: for i ,v in enumerate(Zen):
+
+Comments Entered: NA
+
+13.
+13. 次のコードの実行結果として正しいものはどれか。
+
+i = 5
+i = 6
+
+def f(arg = i):
+    i = 7
+    print(arg)
+
+i = 8
+i = 9
+
+f()
+Answer Provided:
+✓6
+
+
+Correct Answer: 6
+
+Comments Entered: NA
+
+14.
+14. 次のコードに関し、【A】の行の出力として正しいものはどれか。
+
+[コード]
+def culc(a, b=1, squares=[], cubes=[]):
+    squares.append(a ** 2)
+    cubes.append(b ** 3)
+    return squares, cubes
+
+print(culc(1))
+print(culc(2, 3))
+print(culc(3, 4)) 【A】
+print(culc(4, 5))
+Answer Provided:
+✓([1, 4, 9], [1, 27, 64])
+
+
+Correct Answer: ([1, 4, 9], [1, 27, 64])
+
+Comments Entered: NA
+
+15.
+15. 次の関数を呼び出す際に、引数の指定として正しいものはどれか。
+
+def location(city, state, country='Japan'):
+    print("I live in",country,".")
+    print("My company is located in",city,",",state,".")
+
+Answer Provided:
+✓location(state='Tokyo', city='chiyoda')
+
+
+Correct Answer: location(state='Tokyo', city='chiyoda')
+
+Comments Entered: NA
+
+16.
+16. 次のコード1行目の【A】に入るものとして正しいものはどれか。
+
+[コード]
+def shop(name, 【A】):
+    print("flowershop:", name)
+    for arg in arguments:
+        print(arg)
+    print("**Recommended**")
+    keys = sorted(keywords.keys())
+    for kw in keys:
+        print(kw, ":", keywords[kw])
+
+shop("Iris","Open: 9:30 am","Close: 10:30 pm","Monday and holidays are closed.",bouquet="Sunflower",plants="Pachira",dried="Rose")
+
+[実行結果]
+flowershop: Iris
+Open: 9:30 am
+Close: 10:30 pm
+Monday and holidays are closed.
+**Recommended**
+bouquet : Sunflower
+dried : Rose
+plants : Pachira
+Answer Provided:
+✓*arguments, **keywords
+
+
+Correct Answer: *arguments, **keywords
+
+Comments Entered: NA
+
+17.
+17. 次の記述のうち、正しいものはどれか。
+Answer Provided:
+✕docstringはコンパクトにまとめ、空行は避けるべきである。
+
+
+Correct Answer: 国際的な環境で使用する予定のコードでは、PythonのデフォルトであるUTF-8か、さらにプレーンなASCIIが常に最良である。
+
+Comments Entered: NA
+
+18.
+18. 次の結果を得たい場合に、コードの1行目～3行目を代替し同じ結果を出力するものとして正しいものはどれか。
+
+[ 実行結果 ]
+[0, 1, 8, 27, 64]
+
+[ コード ]
+cubes = []
+for x in range(5):
+    cubes.append(x ** 3)
+
+print(cubes)
+Answer Provided:
+✓cubes = [x ** 3 for x in range(5)]
+
+
+Correct Answer: cubes = [x ** 3 for x in range(5)]
+
+Comments Entered: NA
+
+19.
+19. 次の実行結果を得たい場合に、コードの【A】に入るものとして正しいものはどれか。
+
+[実行結果]
+[5, 25, 125]
+
+[コード]
+matrix = 【A】
+power = [row[2] for row in matrix]
+print(power)
+Answer Provided:
+✓[[2, 3, 5], [4, 9, 25], [8, 27, 125]]
+
+
+Correct Answer: [[2, 3, 5], [4, 9, 25], [8, 27, 125]]
+
+Comments Entered: NA
+
+20.
+20. 次の実行結果を得たい場合に、コードの【A】と【B】に入るものの組み合わせとして正しいものはどれか。
+
+[ 実行結果 ]
+deque(['cow', 'dog', 'elephant', 'fox'])
+
+[ コード ]
+from 【A】 import deque
+queue = deque(["bear", "cow", "dog", "elephant","fox"])
+queue.append("goat")
+【B】
+queue.pop()
+print(queue)
+Answer Provided:
+✕【A】collections　【B】queue.pop(1)
+
+
+Correct Answer: 【A】collections　【B】queue.popleft()
+
+Comments Entered: NA
+
+21.
+21. 次のコードの実行結果として正しいものはどれか。
+
+list = [-10, 1, 15, 20, 30]
+list.insert(2,5)
+list.append(50)
+list.sort(reverse = True)
+list.pop(-1)
+print(list)
+Answer Provided:
+✕[30, 20, 5, 1, -10]
+
+
+Correct Answer: [50, 30, 20, 15, 5, 1]
+
+Comments Entered: NA
+
+22.
+22. 次のコードの実行結果として正しいものはどれか。
+
+Zen = 'ExplicitIsBetterThanImplicit'
+print(Zen[1:20:3])
+Answer Provided:
+✓xitBtTn
+
+
+Correct Answer: xitBtTn
+
+Comments Entered: NA
+
+23.
+23. データ構造に関する次の記述のうち誤っているものはどれか。
+Answer Provided:
+✓ディクショナリは変更不能（immutable）であるがキーの型は変更可能（mutable）であり、その値は一意でなければならない。
+
+
+Correct Answer: ディクショナリは変更不能（immutable）であるがキーの型は変更可能（mutable）であり、その値は一意でなければならない。
+
+Comments Entered: NA
+
+24.
+24. 次のうち対話モードで入力したときに「True」が返されるのはどれか。
+Answer Provided:
+✕(10, 20) != (10.0, 20.0)
+
+
+Correct Answer: 'PHP' < 'Perl' < 'Python'
+
+Comments Entered: NA
+
+25.
+25. モジュールに関する次の記述のうち、誤っているものはどれか。
+Answer Provided:
+✓あるモジュールがインポートされるときにインタープリタが検索する順序は、まずビルトインモジュール、次にsys.path変数で得られるディレクトリ、最後にシンボリックリンクを置いてあるディレクトリである。
+
+
+Correct Answer: あるモジュールがインポートされるときにインタープリタが検索する順序は、まずビルトインモジュール、次にsys.path変数で得られるディレクトリ、最後にシンボリックリンクを置いてあるディレクトリである。
+
+Comments Entered: NA
+
+26.
+26. モジュールが定義している名前を対話モードで確認したい。次のスクリプトの２行目【A】に入るものとして正しいものはどれか。
+
+import sys
+【A】
+Answer Provided:
+✓dir(sys)
+
+
+Correct Answer: dir(sys)
+
+Comments Entered: NA
+
+27.
+27. 次のコードの実行結果として正しいものはどれか。
+
+import math
+print('{1:.3f}, {0:.5f}'.format(math.pi, math.e))
+Answer Provided:
+✕3.141, 2.71828
+
+
+Correct Answer: 2.718, 3.14159
+
+Comments Entered: NA
+
+28.
+28. 次のコードを実行して「整数a:」に「5」、「整数b:」に「0」を入力した場合の正しい結果はどれか。なお選択肢中の「, 」は改行に読み替えること。
+
+try:
+    int_a = int(input('整数a:'))
+    int_b = int(input('整数b:'))
+    print(int_a ** 2)
+    print((int_a ** 2) / int_b)
+except(ValueError) as v:
+    print(type(v))
+    print('C')
+except(ZeroDivisionError) :
+    print('D')
+except:
+    print('E')
+else:
+    print('F')
+finally:
+    print('G')
+Answer Provided:
+✓25, D, G
+
+
+Correct Answer: 25, D, G
+
+Comments Entered: NA
+
+29.
+29. エラーと例外に関する次の記述のうち誤っているものはどれか。
+Answer Provided:
+✕文や式が構文的に正しくても、実行しようとするときにエラーが生じることがある。実行中に検知されるエラーは例外と呼ばれ、これは必ずしも致命的なものではない。
+
+
+Correct Answer: パーサ（構文解釈器）は違反のある行を表示し、最後にエラーが検知された点を小さな矢印で示す。エラーは矢印より後のトークンが原因である。
+
+Comments Entered: NA
+
+30.
+30. 次のスクリプトを実行した場合には適切な方法であるクリーンアップがなされる。具体的にはどのような処理がなされているか。
+
+with open("file.txt") as f:
+    for line in f:
+        print(line, end="")
+
+Answer Provided:
+✓f.close()
+
+
+Correct Answer: f.close()
+
+Comments Entered: NA
+
+31.
+31. 次の実行結果を得たい場合、コードの【A】【B】に入る組み合わせとして適切なものはどれか。
+
+[ 実行結果 ]
+Saya is a
+intelligent
+speedster.
+
+[コード]
+class OurException(Exception):
+    pass
+def raise_her_exception(a):
+    print(a, 'is a')
+    raise 【A】
+    print('easygoing person.')
+def func(key: int):
+    try:
+        if key == 0:
+            raise_her_exception('Saya')
+    except OurException as e:
+        print('intelligent')
+        raise 【B】
+
+key = 0
+try:
+    func(key)
+except Exception as f:
+    print('speedster.')
+Answer Provided:
+✓【A】OurException　【B】Exception
+
+
+Correct Answer: 【A】OurException　【B】Exception
+
+Comments Entered: NA
+
+32.
+32. クラスに関する次の記述のうち、誤っているものはどれか。
+Answer Provided:
+✕関数のローカル名前空間は関数がコールされたときに作られ、関数から戻ったり関数内で処理されない例外を送出したりしたとき削除される。
+
+
+Correct Answer: クラスに__init__()メソッドが定義してあると、新規生成されたインスタンスに対して自動的に__init__()メソッドがコールされる。ただし__init__()メソッドに引数を与えることはできない。
+
+Comments Entered: NA
+
+33.
+33. 次の実行結果を得たい場合、コードの【A】【B】の行に入る組み合わせとして適切なものはどれか。なお【A】は★aの行と、【B】は★bの行と同じ数の空白でインデントされている。
+
+[ 実行結果 ]
+I'm Saya.
+I'm Magatama.
+I'm David.
+
+[ コード ]
+class kusanagi():
+    def s(self):
+        print("I'm Saya.")　 …★a　
+        【A】
+    def m(self): 　 …★b
+        print("I'm Magatama.")
+
+class onimaru(kusanagi):
+    【B】
+        print("I'm David.")
+
+k = kusanagi()
+o = onimaru()
+k.s()
+o.d()
+Answer Provided:
+✓【A】self.m()　【B】def d(self):
+
+
+Correct Answer: 【A】self.m()　【B】def d(self):
+
+Comments Entered: NA
+
+34.
+34. コマンドライン上で「python3 script.py one two three four five」を実行したときに、以下の結果を得たい。コード2行目の【A】に入るものとして正しいものはどれか。
+
+[ 実行結果 ]
+['one', 'two', 'three']
+
+[ コード ]
+import sys
+print(【A】)
+Answer Provided:
+✕sys.args[1:3]
+
+
+Correct Answer: sys.argv[1:4]
+
+Comments Entered: NA
+
+35.
+35. 次の正規表現を用いたコードの【A】の部分に入れたときエラーとなるものはどれか。
+
+import re
+prog = re.compile('(K|S)us(a|u)n(a|o)(o|m)?g?i?(saya)?', re.IGNORECASE)
+【A】
+print(ret[0])
+Answer Provided:
+✓ret = prog.search('Kusaneiro')
+
+
+Correct Answer: ret = prog.search('Kusaneiro')
+
+Comments Entered: NA
+
+36.
+36. statisticsモジュールを使って、データの平均、中央値、分散を求めたい。次のコードの【A】【B】【C】に入りうる組み合わせとして正しいものはどれか。
+
+import statistics
+data = [1,10,15,20,25,30,35]
+rslt1 = statistics.【A】(data)
+rslt2 = statistics.【B】(data)
+rslt3 = statistics.【C】(data)
+print(rslt1, rslt2, rslt3)
+Answer Provided:
+✕average median variance
+
+
+Correct Answer: mean median variance
+
+Comments Entered: NA
+
+37.
+37. 今日の日付を得たい場合、次のコード1行目の【A】に入る適切なものはどれか。
+
+【A】
+now = date.today()
+print(now)
+Answer Provided:
+✓from datetime import date
+
+
+Correct Answer: from datetime import date
+
+Comments Entered: NA
+
+38.
+38. loggingモジュールのメッセージの優先度として正しいものはどれか。左から順に優先度が高いものとする。
+Answer Provided:
+✓CRITICAL、ERROR、WARNING、INFO、DEBUG
+
+
+Correct Answer: CRITICAL、ERROR、WARNING、INFO、DEBUG
+
+Comments Entered: NA
+
+39.
+39. 仮想環境とパッケージに関する次の記述のうち誤っているものはどれか。
+Answer Provided:
+✓pip uninstall にパッケージ名を指定すると、その仮想環境からパッケージを削除できる。削除対象となるパッケージの複数指定はできない。
+
+
+Correct Answer: pip uninstall にパッケージ名を指定すると、その仮想環境からパッケージを削除できる。削除対象となるパッケージの複数指定はできない。
+
+Comments Entered: NA
+
+40.
+40. 次の記述に関して誤っているものはどれか。
+Answer Provided:
+✕拡張された対話型インタープリタとしてbpythonがある。これはタブ補完、オブジェクト探索、高度なヒストリ管理などの機能を持つ。
+
+
+Correct Answer: デフォルト設定ではユーザーディレクトリの「.pyhistory」ファイルにヒストリが保存される。ヒストリは対話型インタープリタセッションで利用できる。
+
+Comments Entered: NA
