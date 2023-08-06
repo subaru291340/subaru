@@ -1,0 +1,669 @@
+---
+
+1.
+
+1. Pythonの特徴に関する次の記述のうち、誤っているものはどれか。
+Answer Provided:
+✓Pythonは柔軟な配列や集合、ディクショナリといった、非常に高水準のデータ型を組み込みで持つ。データ型の一般性が高いためPythonの対応可能な問題領域はAwkより広いが、Perlと比べると同程度である。
+
+
+Correct Answer: Pythonは柔軟な配列や集合、ディクショナリといった、非常に高水準のデータ型を組み込みで持つ。データ型の一般性が高いためPythonの対応可能な問題領域はAwkより広いが、Perlと比べると同程度である。
+
+Comments Entered: NA
+
+2.
+2. Pythonインタープリタに関する次の記述のうち、誤っているものはどれか。
+Answer Provided:
+✓インタープリタがスクリプト名（スクリプトのファイル名）と続く引数群を知らされると、これらは文字列のリストとなる。import listitems を実行することで、このリストにアクセスできる。
+
+
+Correct Answer: インタープリタがスクリプト名（スクリプトのファイル名）と続く引数群を知らされると、これらは文字列のリストとなる。import listitems を実行することで、このリストにアクセスできる。
+
+Comments Entered: NA
+
+3.
+3. 数値に関する次の記述のうち、正しいものはどれか。
+Answer Provided:
+✓整数はintという型を持つ。小数点を伴う数はfloatという型を持つ。除算は常にfloatを返す。
+
+
+Correct Answer: 整数はintという型を持つ。小数点を伴う数はfloatという型を持つ。除算は常にfloatを返す。
+
+Comments Entered: NA
+
+4.
+4. 次のコードの実行結果として正しいものはどれか。
+
+a = 2
+b = a ** 3
+c = b / 2 + 3
+d = 10
+e = d // b
+f = d % c
+print ('{1}, {0}'.format(e, f))
+Answer Provided:
+✓3.0, 1
+
+
+Correct Answer: 3.0, 1
+
+Comments Entered: NA
+
+5.
+5. 文字列に関する次の記述のうち、正しいものはどれか。なお「\」はバックスラッシュに読み替えること。
+Answer Provided:
+✕文字列リテラルを複数行にわたり書く一つの方法は、トリプルクオートを使う方法である。最初の改行などの行末文字が文字列に含まれることを避けたい場合は、行末に「-」を置く。
+
+
+Correct Answer: 対話型インタープリタでは文字列は引用符に囲まれ、特殊文字はバックスラッシュでエスケープされた状態で出力される。print()関数では全体を囲む引用符が除去され、エスケープ文字や特殊文字がプリントされた状態で出力される。
+
+Comments Entered: NA
+
+6.
+6. 以下の結果を得たい場合、コードの【A】に入るものとして正しいものはどれか。
+
+[実行結果]
+sNow
+
+[ コード ]
+Zen = 'NowIsBetterThanNever'
+print('{}{}{}'.format(【A】))
+Answer Provided:
+✓Zen[4], Zen[-5], Zen[1:3]
+
+
+Correct Answer: Zen[4], Zen[-5], Zen[1:3]
+
+Comments Entered: NA
+
+7.
+7. 次の変数Zenに関して指定した場合、実行時にエラーとならないものはどれか。
+
+Zen = 'BeautifulIsBetterThanUgly'
+Answer Provided:
+✓Zen[1000:10000]
+
+
+Correct Answer: Zen[1000:10000]
+
+Comments Entered: NA
+
+8.
+8. 次のコードの実行結果として正しいものはどれか。
+
+a, b = 0, 1
+while a < 10:
+    print(a, end=',')
+    a, b = b, a+b
+Answer Provided:
+✓0,1,1,2,3,5,8,
+
+
+Correct Answer: 0,1,1,2,3,5,8,
+
+Comments Entered: NA
+
+9.
+9. 次のコードの実行結果として正しいものはどれか。
+
+months = ['January', 'March', 'May', 'July']
+months.append('September')
+for month in months[:]:
+    if len(month) > 5:
+        months.insert(0,month)
+
+print(months, end = '')
+Answer Provided:
+✓['September', 'January', 'January', 'March', 'May', 'July', 'September']
+
+
+Correct Answer: ['September', 'January', 'January', 'March', 'May', 'July', 'September']
+
+Comments Entered: NA
+
+10.
+10. 次の結果を得たい場合、コード【A】【B】に入る組み合わせとして適切なものはどれか。なお【A】は★aの行と、【B】は★bの行と同じ数の空白でインデントされている。
+
+[ 実行結果 ]
+2 is a prime number
+3 is a prime number
+4 equals 2 * 2
+5 is a prime number
+6 equals 2 * 3
+7 is a prime number
+8 equals 2 * 4
+9 equals 3 * 3
+
+[ コード ]
+for n in range(2, 10):
+            for x in range(2 ,n): 　　…★b
+                      if n % x == 0:
+                                print(n, 'equals', x, '*', n//x) …★a
+                                【A】
+            【B】
+                      print(n,'is a prime number')
+
+Answer Provided:
+✓【A】break 【B】 else:
+
+
+Correct Answer: 【A】break 【B】 else:
+
+Comments Entered: NA
+
+11.
+11. 次のコードの実行結果として正しいものはどれか。
+
+for i in range(-3, -18, -3):
+    print(i, end=", ")
+Answer Provided:
+✓-3, -6, -9, -12, -15,
+
+
+Correct Answer: -3, -6, -9, -12, -15,
+
+Comments Entered: NA
+
+12.
+12. 次の結果を得たい場合、コードの2行目以降を代替するものとして正しいものはどれか。なお各選択肢の次の行には「 print(i, Zen[i]) 」が記述されるものとする。
+
+[ 実行結果 ]
+0 Now
+1 is
+2 better
+3 than
+4 never
+
+[コード]
+Zen = ['Now','is','better','than','never']
+for i ,v in enumerate(Zen):
+    print(i, v)
+Answer Provided:
+✓for i in range(len(Zen)):
+
+
+Correct Answer: for i in range(len(Zen)):
+
+Comments Entered: NA
+
+13.
+13. 次のコードの実行結果として正しいものはどれか。
+
+i = 1
+i = 2
+
+def f(arg):
+    i = 3
+    print(arg)
+
+i = 4
+i = 5
+
+f(i)
+Answer Provided:
+✕2
+
+
+Correct Answer: 5
+
+Comments Entered: NA
+
+14.
+14. 次のコードに関し、【A】の行の出力として正しいものはどれか。
+
+def culc(a, b, squares=[], cubes=[]):
+    squares.append(a ** 2)
+    cubes.append(b ** 3)
+    return squares, cubes
+
+print(culc(2,2))
+print(culc(3,3))
+print(culc(4,4)) 【A】
+print(culc(5,5))
+Answer Provided:
+✓([4, 9, 16], [8, 27, 64])
+
+
+Correct Answer: ([4, 9, 16], [8, 27, 64])
+
+Comments Entered: NA
+
+15.
+15. 次の関数を呼び出す際に、引数の指定として正しいものはどれか。
+
+def location(city, state='NewYork', country='USA'):
+    print("I live in", country, ".")
+    print("My company is located in",city,",",state,".")
+Answer Provided:
+✓location(state='Jakarta', city='Cikini')
+
+
+Correct Answer: location(state='Jakarta', city='Cikini')
+
+Comments Entered: NA
+
+16.
+16. 次のコード1行目の【A】【B】に入る組み合わせとして正しいものはどれか。
+
+[ コード ]
+def shop(name,【A】, 【B】):
+    print("flowershop:", name)
+    keys = sorted(argsX.keys())
+    for kw in keys:
+        print(kw, ":", argsX[kw])
+    for Y in argsY:
+        print(Y)
+
+shop("Iris","Open: 9:30 am","Close: 10:30 pm","Monday and holidays are closed.",bouquet="Sunflower",plants="Pachira",dried="Rose")
+Answer Provided:
+✓【A】*argsY 【B】**argsX
+
+
+Correct Answer: 【A】*argsY 【B】**argsX
+
+Comments Entered: NA
+
+17.
+17. 次の記述のうち、誤っているものはどれか。
+Answer Provided:
+✓例えば「def func(a: int, b:str) -> value」と関数を記述したときにアノテーションに該当するものは「-> value」のみである。
+
+
+Correct Answer: 例えば「def func(a: int, b:str) -> value」と関数を記述したときにアノテーションに該当するものは「-> value」のみである。
+
+Comments Entered: NA
+
+18.
+18. 次の結果を得たい場合に、コードの1行目～3行目を代替するものとして正しいものはどれか。
+
+[ 実行結果 ]
+[0, 9, 36, 81]
+
+[ コード ]
+squares = []
+for x in range(0, 10, 3):
+    squares.append(x ** 2)
+
+print(squares)
+Answer Provided:
+✓squares = [x ** 2 for x in range(0, 10, 3)]
+
+
+Correct Answer: squares = [x ** 2 for x in range(0, 10, 3)]
+
+Comments Entered: NA
+
+19.
+19. 次の実行結果を得たい場合に、コードの2行目（★印の行）を代替するものとして正しいものはどれか。
+
+[実行結果]
+[(1, 4, 8), (3, 9, 27), (5, 25, 125)]
+
+[コード]
+matrix = [[1, 3, 5], [4, 9, 25], [8, 27, 125]]
+power = [[row[i] for row in matrix] for i in range(3)] ★
+print(power)
+Answer Provided:
+✕power = list(zip(matrix))
+
+
+Correct Answer: power = list(zip(*matrix))
+
+Comments Entered: NA
+
+20.
+20. 次の実行結果を得たい場合に、コード1行目～5行目を代替するものとして正しいものはどれか。
+
+[ 実行結果 ]
+[(1, 3), (1, 2), (1, 5), (2, 3), (2, 5), (3, 2), (3, 5)]
+
+[ コード ]
+combs = []
+for x in [1,2,3]:
+    for y in [3,2,5]:
+        if x != y:
+            combs.append((x, y))
+
+print(combs)
+Answer Provided:
+✓combs = [(a,b) for a in [1,2,3] for b in [3,2,5] if a != b]
+
+
+Correct Answer: combs = [(a,b) for a in [1,2,3] for b in [3,2,5] if a != b]
+
+Comments Entered: NA
+
+21.
+21. 次のコードの実行結果として正しいものはどれか。
+
+list = [-10, 1, 15, 20, 30]
+list.append(50)
+list.sort(reverse = True)
+list.insert(2,5)
+list.pop(-1)
+print(list)
+Answer Provided:
+✕[-10, 1, 5, 15, 20, 30]
+
+
+Correct Answer: [50, 30, 5, 20, 15, 1]
+
+Comments Entered: NA
+
+22.
+22. 次のコードの実行結果として正しいものはどれか。
+Zen = 'FlatIsBetterThanNested'
+print(Zen[0:20:3])
+Answer Provided:
+✓FtBtTns
+
+
+Correct Answer: FtBtTns
+
+Comments Entered: NA
+
+23.
+23. データ構造に関する次の記述のうち正しいものはどれか。
+Answer Provided:
+✕ディクショナリに対する帰属性判定演算子「in」「not in」による判定において、「含まれるかどうか」の判定の対象は「キー」ではなく「値」である。
+
+
+Correct Answer: リストとタプルは順序を持つ要素の集まりであるという共通点がある。
+
+Comments Entered: NA
+
+24.
+24. 対話モードで入力したときに「True」が返されるものは次のうちどれか。
+Answer Provided:
+✓1 > -1 == (1-2)
+
+
+Correct Answer: 1 > -1 == (1-2)
+
+Comments Entered: NA
+
+25.
+25. モジュールに関する次の記述のうち、誤っているものはどれか。
+Answer Provided:
+✓sys.pathが初期化されている場所は、入力スクリプトのあるディレクトリ、PYTHONPATHであり、インストールごとのデフォルトは含まれない。
+
+
+Correct Answer: sys.pathが初期化されている場所は、入力スクリプトのあるディレクトリ、PYTHONPATHであり、インストールごとのデフォルトは含まれない。
+
+Comments Entered: NA
+
+26.
+26. モジュールが定義している名前を対話モードで確認したい。次のコードの２行目【A】に入るものとして正しいものはどれか。
+
+import sys
+【A】
+Answer Provided:
+✓dir(sys)
+
+
+Correct Answer: dir(sys)
+
+Comments Entered: NA
+
+27.
+27. 次のコードの実行結果として正しいものはどれか。
+
+import math
+print('{1:.5f}, {0:.3f}'.format(math.pi, math.e))
+Answer Provided:
+✓2.71828, 3.142
+
+
+Correct Answer: 2.71828, 3.142
+
+Comments Entered: NA
+
+28.
+28. 次のコードを実行して「整数a:」に「3」、「整数b:」に「0」を入力した場合の正しい結果はどれか。なお選択肢中の「, 」は改行に読み替えること。
+
+try:
+    int_a = int(input('整数a:'))
+    int_b = int(input('整数b:'))
+    print(int_a ** 3)
+    print((int_a ** 3) / int_b)
+except(ZeroDivisionError) :
+    print('C')
+except(ValueError) as v:
+    print(type(v))
+    print('D')
+except:
+    print('E')
+else:
+    print('F')
+finally:
+    print('G')
+Answer Provided:
+✓27, C, G
+
+
+Correct Answer: 27, C, G
+
+Comments Entered: NA
+
+29.
+29. エラーと例外に関する次の記述のうち誤っているものはどれか。
+Answer Provided:
+✕パーサ（構文解釈器）は違反のある行を表示し、最初にエラーが検知された点を小さな矢印で示す。エラーは矢印より前のトークンが原因である。
+
+
+Correct Answer: [Ctrl]+[C]キーなどでユーザーがプログラムに割り込みをかけると、KeyError例外が送出される。
+
+Comments Entered: NA
+
+30.
+30. 次のコードを実行した場合には適切な方法で、あるクリーンアップがなされる。具体的にはどのような処理がなされているか。
+
+with open("file.txt") as f:
+    for line in f:
+        print(line, end="")
+Answer Provided:
+✓f.close()
+
+
+Correct Answer: f.close()
+
+Comments Entered: NA
+
+31.
+31. 次の実行結果を得たい場合、コードの【A】【B】【C】に入る組み合わせとして適切なものはどれか。
+
+[ 実行結果 ]
+David is a
+strategic
+AI
+
+[コード]
+class wexal(Exception):
+    pass
+
+name = 'David'
+
+def func(name: int):
+    try:
+        if name != 0:
+            raise_his_character(name)
+    except wexal:
+        print('【A】')
+        raise Exception
+def raise_his_character(a):
+    print(a, '【B】')
+    raise wexal
+    print('【C】')
+
+try:
+    func(name)
+except Exception:
+    print('【D】')
+Answer Provided:
+✕【A】naughty boy　【B】is a　【C】strategic　【D】AI
+
+
+Correct Answer: 【A】strategic　【B】is a　【C】naughty boy　【D】AI
+
+Comments Entered: NA
+
+32.
+32. 次のコードの実行結果として正しいものはどれか。なお各選択肢内は改行されているものとして読み替えること。
+
+def scope():
+    loc = "init"
+    def do_local():
+        loc = "local"
+    def do_nonlocal():
+        nonlocal loc
+        loc = "nonlocal"
+    def do_global():
+        global loc
+        loc = "global"
+
+    do_local()
+    print("A:", loc)
+    do_nonlocal()
+    print("B:", loc)
+    do_global()
+    print("C:", loc)
+
+scope()
+print("D:", loc)
+Answer Provided:
+✕A: local　B: nonlocal　C: nonlocal　D: global
+
+
+Correct Answer: A: init　B: nonlocal　C: nonlocal　D: global
+
+Comments Entered: NA
+
+33.
+33. 次の実行結果を得たい場合、コードの【A】【B】の行および【C】に入る組み合わせとして適切なものはどれか。なお【A】は★aの行と、【B】は★bの行と同じ数の空白でインデントされている。
+
+[ 実行結果 ]
+Need Speed?
+I'm Saya.
+Need Speed?
+I'm David.
+
+[ コード ]
+class kusanagi():
+    def s(self):
+        print("Need Speed?") 　 …★a　
+        【A】
+    def m(self): 　 …★b
+        print("I'm Saya.")
+class wexal(kusanagi):
+        def 【B】:
+            print("I'm David.")
+
+k = kusanagi()
+w = wexal()
+k.s()
+w.【C】
+Answer Provided:
+✓【A】self.m()　【B】m(self):　【C】s()
+
+
+Correct Answer: 【A】self.m()　【B】m(self):　【C】s()
+
+Comments Entered: NA
+
+34.
+34. コマンドライン上で「python3 script.py one two three four five」を実行したときに、以下の結果を得たい。コード２行目の【A】に入るものとして正しいものはどれか。
+
+[ 実行結果 ]
+['script.py', 'one', 'two']
+
+[ script.pyのコード ]
+import sys
+print(【A】)
+Answer Provided:
+✕sys.args[1:4]
+
+
+Correct Answer: sys.argv[0:3]
+
+Comments Entered: NA
+
+35.
+35. 次の正規表現を用いたコードの【A】の部分に入れたときエラーとなるものはどれか。
+
+import re
+prog = re.compile('(K|S)u(r|s)(a|o)nf?(a|o)(o|m)?g?i?(saya)?', re.IGNORECASE)
+【A】
+print(ret[0])
+Answer Provided:
+✕ret = prog.search('kusanomi')
+
+
+Correct Answer: ret = prog.search('kurofune')
+
+Comments Entered: NA
+
+36.
+36. 対話モードでrandomモジュールを用い以下のような各結果を得たい場合、各コード【A】～【C】に入る正しい組み合わせはどれか。
+
+>>> import random
+>>> random.【A】(['apple', 'pear', 'banana'])　
+'apple'
+>>> random.【B】(range(10),3)
+[3, 7, 5]
+>>> random.【C】(5)
+4
+Answer Provided:
+✕【A】choice 【B】sample 【C】rand
+
+
+Correct Answer: 【A】choice 【B】sample 【C】randrange
+
+Comments Entered: NA
+
+37.
+37. 今日の日付を次の実行結果のように得たい場合、コードの1行目【A】と2行目の【B】に入る適切なものはどれか。
+
+[ 実行結果 ]
+2020-06-27
+
+[ コード ]
+【A】
+now = 【B】
+print(now)
+Answer Provided:
+✓【A】from datetime import date　 【B】date.today()
+
+
+Correct Answer: 【A】from datetime import date　 【B】date.today()
+
+Comments Entered: NA
+
+38.
+38. loggingモジュールのメッセージの優先度として正しいものはどれか。左から順に優先度が低いものとする。
+Answer Provided:
+✓DEBUG、INFO、WARNING、ERROR、CRITICAL
+
+
+Correct Answer: DEBUG、INFO、WARNING、ERROR、CRITICAL
+
+Comments Entered: NA
+
+39.
+39. 仮想環境とパッケージに関する次の記述のうち誤っているものはどれか。
+Answer Provided:
+✕pip uninstall にパッケージ名を指定すると、その仮想環境からパッケージを削除できる。削除対象となるパッケージの複数指定も可能である。
+
+
+Correct Answer: 「pip list パッケージ名」で、ある特定のパッケージの詳細情報が表示される。
+
+Comments Entered: NA
+
+40.
+40. 次の記述に関して誤っているものはどれか。
+Answer Provided:
+✕bpythonに類似した拡張対話環境にIPythonがある。IPythonは「pip install ipython」でインストールでき、IPythonの対話モードはipythonコマンドで起動できる。
+
+
+Correct Answer: 変数とモジュールの補完機能は、インタープリタの起動時には有効になっていないため設定が必要である。
+
+Comments Entered: NA
