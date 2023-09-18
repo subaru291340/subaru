@@ -22,6 +22,47 @@
 - LINQを使用して、リスト内の数字を昇順または降順でソートし、ソート結果をExcelに表示します。
 - LINQを使用して、リスト内の数字を2倍にして新しいリストを作成し、それをExcelに表示します。
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace ExcelAddInExample
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            // Excelからセルに格納された数字のリストを仮定します。
+            List<int> excelData = new List<int> { 5, 8, 2, 12, 7, 3, 6 };
+
+            // LINQを使用して、リスト内の偶数を抽出し、それを表示します。
+            var evenNumbers = excelData.Where(num => num % 2 == 0);
+            Console.WriteLine("偶数:");
+            foreach (var num in evenNumbers)
+            {
+                Console.WriteLine(num);
+            }
+
+            // LINQを使用して、リスト内の数字を昇順でソートし、それを表示します。
+            var sortedNumbers = excelData.OrderBy(num => num);
+            Console.WriteLine("\n昇順でソート:");
+            foreach (var num in sortedNumbers)
+            {
+                Console.WriteLine(num);
+            }
+
+            // LINQを使用して、リスト内の数字を2倍にして新しいリストを作成し、それを表示します。
+            var doubledNumbers = excelData.Select(num => num * 2);
+            Console.WriteLine("\n2倍にした数字:");
+            foreach (var num in doubledNumbers)
+            {
+                Console.WriteLine(num);
+            }
+        }
+    }
+}
+
+
 **課題 4: Excelとのデータの受け渡し**
 学習ポイント: Excelからデータを読み取り、Excelにデータを書き込む方法を理解する。
 
